@@ -424,6 +424,12 @@ nav li:hover {
   object-fit: contain;
 }
 
+.no-back-mobile {
+  display: none;
+  width: 61%;
+  object-fit: contain;
+}
+
 .analytics__content {
   min-width: 568px;
   display: flex;
@@ -1408,6 +1414,10 @@ hr {
     display: none;
   }
 
+  .no-back-mobile {
+    display: block;
+  }
+
   .analytics__content {
     padding: 0;
     max-width: 60%;
@@ -2222,6 +2232,11 @@ hr {
     max-width: 331px;
   }
 
+  .header__content span {
+    background-size: contain;
+    background-position: 0 20px;
+  }
+
   .burger {
     display: flex;
   }
@@ -2241,6 +2256,7 @@ hr {
 
   .facts {
     margin-top: 0;
+    height: auto;
     padding-top: 48px;
   }
 
@@ -2404,6 +2420,7 @@ hr {
 
   .features-block {
     overflow: visible;
+    margin-top: 0;
     padding: 80px 0 0 0;
     margin-bottom: 60px;
   }
@@ -2534,6 +2551,11 @@ hr {
     line-height: 150%;
   }
 
+  .tracker__info h2 span {
+    padding-right: 5px;
+    background: url("./img/min-shape-light.png") 5px 14px no-repeat;
+  }
+
   .middle-wrapper {
     justify-content: flex-start;
   }
@@ -2599,6 +2621,7 @@ hr {
   }
 
   .price-list h2 span {
+    background: url("./img/light-shape.png") 30px 10px no-repeat;
     padding: 0;
   }
 
@@ -2649,6 +2672,10 @@ hr {
     flex-direction: column;
     align-items: flex-start;
     gap: 29px;
+  }
+
+  .partners__info h2 span {
+    background: url("./img/min-light-shape.png") 62px 20px no-repeat;
   }
 
   .price__info-item h4 {
@@ -2778,6 +2805,10 @@ hr {
     padding: 80px 0;
   }
 
+  .comment header span {
+    background: url("./img/light-shape.png") 0 15px no-repeat;
+  }
+
   .comment__wrapper {
     max-width: 340px;
     display: flex;
@@ -2869,6 +2900,12 @@ hr {
     flex-direction: column;
     justify-content: flex-start;
     gap: 0;
+  }
+
+  .store__content span {
+    padding: 0 20px 5px 0;
+    background-size: contain;
+    background: url("./img/min-shape-light.png") 93px 10px no-repeat;
   }
 
   .store__button {
@@ -3033,5 +3070,9 @@ hr {
 
   .vector1 {
     left: 230px;
+  }
+
+  .price-list h2 span {
+    background: url("./img/min-shape-light.png") 5px 15px no-repeat;
   }
 }
