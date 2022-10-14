@@ -1382,6 +1382,7 @@ hr {
   }
 
   .features-block {
+    overflow: visible;
     align-items: center;
   }
 
