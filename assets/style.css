@@ -2252,7 +2252,7 @@ hr {
   .header {
     min-height: 589px;
     height: auto;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .facts {
@@ -2303,7 +2303,7 @@ hr {
   .header__content p {
     flex-wrap: wrap;
     margin-top: 12px;
-    min-width: 307px;
+    max-width: 307px;
     text-align: start;
     font-family: "Inter";
     font-style: normal;
@@ -2323,11 +2323,8 @@ hr {
   }
 
   .vector3 {
-    right: -8px;
     top: 110px;
-    width: 46px;
     height: 74px;
-    object-fit: scale-down;
   }
 
   .clock {
