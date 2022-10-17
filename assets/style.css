@@ -45,6 +45,10 @@ nav li:hover {
   border-radius: 4px;
 }
 
+.vector8 {
+  display: none;
+}
+
 .vector6 {
   display: none;
 }
@@ -233,7 +237,8 @@ nav li:hover {
 
 .facts {
   box-sizing: border-box;
-  background: url("../assets/img/Vector.png") 0 0 no-repeat;
+  background: linear-gradient(to right, #ffff, transparent 70%) 0 center/100%,
+    url("../assets/img/Vector.png") center 0 no-repeat;
   width: 100%;
   height: 270px;
   margin-top: -355px;
@@ -295,10 +300,10 @@ nav li:hover {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: -2px;
+  margin-top: -70px;
   padding-bottom: 77px;
   box-sizing: border-box;
-  padding-top: 140px;
+  padding-top: 195px;
   background: #ffffff;
 }
 
@@ -413,25 +418,32 @@ nav li:hover {
 .analytics {
   padding-top: 70px;
   padding-bottom: 100px;
+  width: 100%;
   display: flex;
-  width: 80.36%;
+  justify-content: center;
+}
+
+.analytics__container {
+  display: flex;
+  max-width: 1920px;
   flex-direction: row;
+  justify-content: start;
   gap: 34px;
 }
 
 .big-picture {
-  width: 61%;
+  max-width: 61%;
   object-fit: contain;
 }
 
 .no-back-mobile {
   display: none;
-  width: 61%;
+  max-width: 61%;
   object-fit: contain;
 }
 
 .analytics__content {
-  min-width: 568px;
+  max-width: 568px;
   display: flex;
   flex-direction: column;
   padding-top: 120px;
@@ -504,7 +516,7 @@ nav li:hover {
   padding-bottom: 145px;
   background-color: #f8fefe;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .darts {
@@ -862,14 +874,24 @@ nav li:hover {
 .partners {
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f8fefe;
   padding: 120px 76px 80px 76px;
+}
+
+.partners__container {
+  display: flex;
+  align-items: flex-start;
+  width: 1920px;
 }
 
 .partners__wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
   gap: 100px;
 }
 
@@ -1145,7 +1167,7 @@ nav li:hover {
 }
 
 .store__container {
-  width: 55%;
+  max-width: 1046px;
   margin-right: 125px;
   display: flex;
   flex-direction: row;
@@ -1403,7 +1425,7 @@ hr {
     gap: 32px;
   }
 
-  .analytics {
+  .analytics__container {
     flex-direction: column;
     width: 100%;
     align-items: center;
@@ -1479,6 +1501,7 @@ hr {
   }
 
   .price__info-item {
+    border-radius: 30px;
     width: 100%;
     padding: 48px;
     justify-content: space-between;
@@ -1495,10 +1518,18 @@ hr {
     margin-top: 0;
   }
 
+  .item-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 29px;
+  }
+
   .item__text {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 80px;
     gap: 16px;
   }
@@ -1513,6 +1544,10 @@ hr {
 
   .partners {
     display: flex;
+    justify-content: center;
+  }
+
+  .partners__container {
     justify-content: center;
   }
 
@@ -1648,9 +1683,13 @@ hr {
   }
 }
 
-/* @media screen and (max-width: 875px) {
+@media screen and (max-width: 875px) {
   .container {
     max-width: 90%;
+  }
+
+  .burger {
+    display: flex;
   }
 
   .navigation__menu {
@@ -1659,11 +1698,20 @@ hr {
 
   .header {
     overflow: hidden;
+    max-height: 589px;
+  }
+
+  .mobile2 {
+    width: 240px;
+    height: 409px;
+    top: 60px;
+    left: 591px;
   }
 
   .header__content {
-    margin-top: 75px;
+    margin-top: 100px;
     align-items: flex-start;
+    max-width: 560px;
   }
   .header__content h1 {
     text-align: start;
@@ -1671,6 +1719,7 @@ hr {
     font-style: normal;
     font-weight: 700;
     line-height: 160%;
+    font-size: 32px;
     color: #1c0e0d;
   }
 
@@ -1685,8 +1734,27 @@ hr {
     line-height: 36px;
   }
 
+  .header__content span {
+    background-size: contain;
+    background-position: 0 17px;
+  }
+
   .header__content button {
     margin-top: 40px;
+  }
+
+  .clock {
+    top: -30px;
+    left: 525px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .clipboard {
+    display: block;
+    top: 160px;
+    width: 130px;
+    left: 400px;
   }
 
   .vector3 {
@@ -1697,15 +1765,9 @@ hr {
     object-fit: scale-down;
   }
 
-  .clock {
-    object-fit: cover;
-    top: -91px;
-    left: 660px;
-  }
-
   .vector1 {
-    top: 327px;
-    left: 246px;
+    top: 277px;
+    left: 373px;
     object-fit: cover;
     width: 66.5px;
     height: 70px;
@@ -1721,28 +1783,21 @@ hr {
   .facts {
     margin-top: 0;
     padding-top: 48px;
+    height: auto;
   }
 
   .fact__list {
-    flex-direction: column;
+    max-width: 700px;
     gap: 48px;
   }
 
   .big-num {
     font-family: "Poppins";
     font-style: normal;
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 64px;
   }
 
   .litlle-num {
     margin-top: 28px;
-  }
-
-  .fact__list hr {
-    margin: 0;
-    width: 180px;
   }
 
   .features__container {
@@ -1752,6 +1807,8 @@ hr {
   .features-block h2 {
     font-family: "Poppins";
     font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
     text-align: center;
     color: #18063c;
   }
@@ -1781,44 +1838,19 @@ hr {
     background-size: contain;
   }
 
-  .rocket {
-    object-fit: cover;
-    top: -205px;
-    left: -45px;
-  }
-
-  .vector2,
-  .vector5,
-  .vector4,
-  .mobile2,
-  .mobile1,
-  .vector5,
-  .rec,
-  .darts,
-  .img-list,
-  .blue-arrow,
-  .pink-arrow,
-  .tracker__text,
-  .hand,
-  .sand-watch,
-  .line,
-  .emoji,
-  .comment-rec,
-  .left-hand,
-  .mobile,
-  .clipboard {
-    display: none;
+  .features-block__content p {
+    font-size: 16px;
+    line-height: 36px;
   }
 
   .features-block {
     overflow: visible;
-    padding: 180px 0 0 0;
-    margin-bottom: 180px;
+    margin-top: 25px;
+    padding: 180px 0 80px 0;
   }
 
   .card-block {
     margin-top: 28px;
-    flex-direction: column;
     gap: 20px;
   }
 
@@ -1839,6 +1871,43 @@ hr {
     border-radius: 15px;
   }
 
+  .card-item__text {
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  .card-item__text p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .rocket {
+    object-fit: cover;
+    top: -170px;
+    left: -130px;
+  }
+
+  .vector2,
+  .vector5,
+  .vector4,
+  .mobile1,
+  .vector5,
+  .rec,
+  .darts,
+  .img-list,
+  .blue-arrow,
+  .pink-arrow,
+  .tracker__text,
+  .hand,
+  .sand-watch,
+  .line,
+  .emoji,
+  .comment-rec,
+  .left-hand,
+  .mobile {
+    display: none;
+  }
+
   .analytics {
     width: 100%;
     flex-direction: column;
@@ -1851,7 +1920,18 @@ hr {
 
   .analytics__content {
     width: 90%;
+    max-width: 600px;
     padding-top: 0;
+  }
+
+  .analytics__content header h3 {
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  .analytics__content header p {
+    font-size: 16px;
+    line-height: 180%;
   }
 
   .analytics__list {
@@ -1861,6 +1941,16 @@ hr {
 
   .analytics__item {
     gap: 18px;
+  }
+
+  .item__content .content__haeder {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .item__content .content__text {
+    font-size: 14px;
+    line-height: 180%;
   }
 
   .tracker {
@@ -2225,11 +2315,12 @@ hr {
     gap: 24px;
     flex-direction: column;
   }
-} */
+}
 
-@media screen and (max-width: 875px) {
+@media screen and (max-width: 465px) {
   .container {
     max-width: 331px;
+    padding-left: 3px;
   }
 
   .header__content span {
@@ -2285,7 +2376,7 @@ hr {
 
   .header__content {
     flex-wrap: wrap;
-    margin-top: 75px;
+    margin-top: 74.76px;
     align-items: flex-start;
   }
   .header__content h1 {
@@ -2303,7 +2394,7 @@ hr {
   .header__content p {
     flex-wrap: wrap;
     margin-top: 12px;
-    max-width: 307px;
+    width: 307px;
     text-align: start;
     font-family: "Inter";
     font-style: normal;
@@ -2313,7 +2404,7 @@ hr {
   }
 
   .header__content button {
-    margin-top: 40px;
+    margin-top: 38px;
   }
 
   .navigation__logo {
@@ -2336,16 +2427,19 @@ hr {
   }
 
   .vector1 {
-    top: 327px;
-    left: 246px;
-    object-fit: cover;
-    width: 66.5px;
-    height: 70px;
+    display: none;
+  }
+
+  .vector8 {
+    display: block;
+    position: absolute;
+    top: 461px;
+    left: 277px;
   }
 
   .vector6 {
     position: absolute;
-    top: 504px;
+    top: 506px;
     left: -0;
     object-fit: cover;
   }
