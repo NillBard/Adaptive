@@ -279,11 +279,12 @@ nav li:hover {
   font-size: 18px;
   line-height: 18px;
   color: #8c8c8c;
+  text-align: center;
 }
 
 .rec {
   position: absolute;
-  top: 10px;
+  top: 80px;
   left: 85px;
 }
 
@@ -343,7 +344,7 @@ nav li:hover {
 }
 
 .features-block__content {
-  margin-top: 20px;
+  margin-top: 30px;
   max-width: 659px;
   font-family: "Inter";
   font-weight: 400;
@@ -373,7 +374,7 @@ nav li:hover {
   padding: 28px;
 }
 
-.card-item__text {
+.card-item__text h4 {
   display: flex;
   flex-direction: column;
   width: 99%;
@@ -402,7 +403,8 @@ nav li:hover {
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
-  color: #e2f6f8;
+  color: #ffffff;
+  opacity: 0.8;
   width: 90%;
 }
 
@@ -509,6 +511,7 @@ nav li:hover {
   line-height: 36px;
   color: #404040;
   opacity: 0.8;
+  max-width: 300px;
 }
 
 .tracker {
@@ -564,7 +567,7 @@ nav li:hover {
 }
 
 .tracker__text {
-  margin-top: 20px;
+  margin-top: 30px;
   font-family: "Inter";
   font-weight: 400;
   font-size: 18px;
@@ -1684,8 +1687,8 @@ footer hr {
   .right-hand {
     right: 0;
     top: 230px;
-    width: 632px;
-    height: 218px;
+    width: 280px;
+    height: 110px;
   }
 
   .store__container {
@@ -2341,10 +2344,10 @@ footer hr {
   }
 
   .right-hand {
-    width: 176px;
-    height: 60px;
+    width: 240px;
+    height: 110px;
     right: 0;
-    top: 215px;
+    top: 190px;
   }
 
   .store__container {
