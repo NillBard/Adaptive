@@ -237,7 +237,8 @@ nav li:hover {
 
 .facts {
   box-sizing: border-box;
-  background: linear-gradient(to right, #ffff, transparent 70%) 0 center/100%,
+  background: linear-gradient(to right, #ffff 40%, transparent 60%) 0
+      center/100%,
     url("../assets/img/Vector.png") center 0 no-repeat;
   width: 100%;
   height: 270px;
@@ -424,6 +425,7 @@ nav li:hover {
 }
 
 .analytics__container {
+  width: 100%;
   display: flex;
   max-width: 1920px;
   flex-direction: row;
@@ -561,7 +563,16 @@ nav li:hover {
   color: #18063c;
 }
 
-.tracker__info p {
+.tracker__text {
+  margin-top: 20px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 36px;
+  color: #656666;
+}
+
+.info__item-content p {
   margin-top: 20px;
   font-family: "Inter";
   font-weight: 400;
@@ -713,6 +724,11 @@ nav li:hover {
   align-items: center;
   gap: 20px;
   color: #404040;
+}
+
+.switch-block span {
+  width: 97px;
+  text-align: center;
 }
 
 .switch-button {
@@ -1188,6 +1204,7 @@ nav li:hover {
   font-style: normal;
   font-size: 48px;
   line-height: 70px;
+  font-weight: 600;
   color: #18063c;
 }
 
@@ -1303,7 +1320,7 @@ footer {
   height: 30px;
 }
 
-hr {
+footer hr {
   margin-top: 63px;
   opacity: 0.5;
 }
@@ -1369,6 +1386,10 @@ hr {
   .partners__info h2 span {
     padding: 5px;
     background: url("./img/Shape.png") 100px 40px no-repeat;
+  }
+
+  .analytics__content header span {
+    background-position: 35px 35px;
   }
 }
 
@@ -1663,6 +1684,8 @@ hr {
   .right-hand {
     right: 0;
     top: 230px;
+    width: 632px;
+    height: 218px;
   }
 
   .store__container {
@@ -1787,8 +1810,13 @@ hr {
   }
 
   .fact__list {
-    max-width: 700px;
+    width: 80%;
     gap: 48px;
+  }
+
+  .facts__item {
+    height: 110px;
+    justify-content: space-between;
   }
 
   .big-num {
@@ -1796,8 +1824,8 @@ hr {
     font-style: normal;
   }
 
-  .litlle-num {
-    margin-top: 28px;
+  .fact__list hr {
+    display: none;
   }
 
   .features__container {
@@ -1968,8 +1996,45 @@ hr {
     align-items: center;
   }
 
-  .middle-wrapper {
-    justify-content: flex-start;
+  .tracker__text {
+    max-width: 100%;
+    display: block;
+    font-size: 14px;
+    line-height: 180%;
+  }
+
+  .tracker__info h2 {
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  .info__item h4 {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .info__item p {
+    font-size: 14px;
+    line-height: 180%;
+  }
+
+  .info__item img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .tracker__info {
+    width: 90%;
+  }
+
+  .tracker__info h2 span {
+    padding-right: 5px;
+    background: url(./img/min-shape-light.png) 5px 14px no-repeat;
+  }
+
+  .info__list {
+    gap: 30px;
+    margin-top: 36px;
   }
 
   .tracker__image-block {
@@ -1993,8 +2058,25 @@ hr {
     padding: 80px 0;
   }
 
+  .price-list h2 {
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  .price-list h2 span {
+    background: url(./img/light-shape.png) 30px 10px no-repeat;
+    padding: 0;
+  }
+
   .price__text {
-    text-align: center;
+    font-size: 16px;
+    line-height: 36px;
+  }
+
+  .switch-block {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .switch-button {
@@ -2009,10 +2091,14 @@ hr {
 
   .price__info {
     margin-top: 41px;
-    flex-direction: column;
     align-items: center;
-    gap: 28px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 80%;
   }
+
   .price__info-item {
     width: 327px;
     height: 288px;
@@ -2045,11 +2131,17 @@ hr {
     margin-top: 0;
     align-items: center;
     font-size: 28px;
+    max-width: 130px;
     line-height: 100%;
   }
 
   .price :nth-child(1) {
     margin-top: 0;
+    margin-right: 3px;
+  }
+
+  .price :nth-child(2) {
+    margin-left: 4px;
   }
 
   .item__text {
@@ -2078,8 +2170,12 @@ hr {
     justify-content: center;
   }
 
+  .partners__container {
+    width: 80%;
+  }
+
   .partners__wrapper {
-    max-width: 90%;
+    max-width: 100%;
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -2091,26 +2187,36 @@ hr {
   }
 
   .partners__info h2 {
+    text-transform: capitalize;
     text-align: start;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
   }
 
   .partners__info p {
+    max-width: none;
     text-align: start;
     margin-top: 18px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
   }
 
   .partners__info button {
     margin-top: 28px;
   }
 
-  div.light-gray {
-    display: none;
-  }
-
   .partners__list {
     align-items: flex-start;
     gap: 16px;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+
+  .partners__info h2 span {
+    background: url(./img/min-light-shape.png) 62px 20px no-repeat;
   }
 
   .list__img {
@@ -2128,7 +2234,7 @@ hr {
   }
 
   .rec-figure {
-    width: 300px;
+    width: 250px;
     height: 160px;
     border-radius: 10px;
     background: rgba(65, 165, 238, 0.1);
@@ -2141,7 +2247,7 @@ hr {
   .green,
   .orange,
   .blue {
-    width: 300px;
+    width: 250px;
     height: 160px;
     border-radius: 10px;
   }
@@ -2153,7 +2259,6 @@ hr {
   }
 
   .comment__wrapper {
-    max-width: 340px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -2167,7 +2272,12 @@ hr {
 
   .comment header h2 {
     font-size: 24px;
+    text-transform: capitalize;
     line-height: 140%;
+  }
+
+  .comment header span {
+    background: url(./img/light-shape.png) 0 15px no-repeat;
   }
 
   .comment header p {
@@ -2181,24 +2291,24 @@ hr {
   }
 
   .like {
-    top: 150px;
-    left: 180px;
+    top: -20px;
+    left: 165px;
     margin: 0;
     width: 62px;
     height: 63px;
   }
   .comment-line {
-    top: 230px;
-    left: 234px;
+    top: 45px;
+    left: 230px;
     width: 62.43px;
     height: 55.9px;
   }
 
-  .comment__block img {
-    width: 79px;
-    height: 81px;
-    top: 80px;
-    left: 287px;
+  .chat {
+    width: 82px;
+    height: 83px;
+    top: 75px;
+    left: 300px;
   }
 
   .comment__info p {
@@ -2233,12 +2343,12 @@ hr {
   .right-hand {
     width: 176px;
     height: 60px;
-    right: -17px;
-    top: 230px;
+    right: 0;
+    top: 215px;
   }
 
   .store__container {
-    max-width: 340px;
+    width: 80%;
     margin: 0;
     align-items: flex-start;
     flex-direction: column;
@@ -2262,6 +2372,12 @@ hr {
   .store__content h2 {
     font-size: 24px;
     line-height: 140%;
+    text-transform: capitalize;
+  }
+
+  .store__content span {
+    padding: 0 20px 5px 0;
+    background: url("./img/min-light-shape.png") 93px 15px no-repeat;
   }
 
   .store__content p {
@@ -2274,30 +2390,30 @@ hr {
   }
 
   .footer__container {
-    width: 340px;
+    width: 80%;
   }
 
   .footer__content {
+    gap: 30px;
+    align-items: flex-start;
     flex-direction: column;
-    gap: 46px;
-    align-items: flex-start;
-  }
-
-  .footer__nav {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 49px;
   }
 
   footer hr {
     display: none;
   }
 
+  .footer__nav {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
   .footer__nav ul {
-    flex-direction: column;
     gap: 28px;
   }
   .social {
+    gap: 45px;
     flex-direction: row;
     align-items: center;
   }
@@ -2306,13 +2422,14 @@ hr {
     font-size: 16px;
     color: #9f9f9f;
     line-height: 24px;
-    margin-top: 40px;
+    margin-top: 35px;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
   }
   .condition {
     gap: 24px;
+    width: auto;
     flex-direction: column;
   }
 }
@@ -2343,7 +2460,7 @@ hr {
   .header {
     min-height: 589px;
     height: auto;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .facts {
@@ -2394,7 +2511,7 @@ hr {
   .header__content p {
     flex-wrap: wrap;
     margin-top: 12px;
-    width: 307px;
+    max-width: 307px;
     text-align: start;
     font-family: "Inter";
     font-style: normal;
@@ -2415,6 +2532,8 @@ hr {
 
   .vector3 {
     top: 110px;
+    right: 0;
+    width: auto;
     height: 74px;
   }
 
@@ -2433,8 +2552,8 @@ hr {
   .vector8 {
     display: block;
     position: absolute;
-    top: 461px;
-    left: 277px;
+    top: 330px;
+    left: 260px;
   }
 
   .vector6 {
@@ -2569,7 +2688,7 @@ hr {
   }
 
   .analytics__content {
-    max-width: 311px;
+    max-width: 327pxpx;
     min-width: 0;
     padding-top: 0;
   }
@@ -2577,9 +2696,12 @@ hr {
   .big-picture {
     position: relative;
     left: -36px;
-    object-fit: fill;
-    width: 386.22px;
-    height: 363.15px;
+    object-fit: cover;
+    max-width: 90%;
+  }
+
+  .no-back-mobile {
+    display: none;
   }
 
   .analytics__content header h3 {
@@ -2633,11 +2755,16 @@ hr {
   }
 
   .tracker__container {
+    width: 100%;
     gap: 48px;
-    max-width: 307px;
+    max-width: 327px;
     margin: 0;
     flex-direction: column;
     align-items: center;
+  }
+
+  .tracker__info {
+    width: 100%;
   }
 
   .tracker__info h2 {
@@ -2651,8 +2778,17 @@ hr {
     background: url("./img/min-shape-light.png") 5px 14px no-repeat;
   }
 
+  .tracker__text {
+    display: none;
+  }
+
   .middle-wrapper {
     justify-content: flex-start;
+  }
+
+  .info__item {
+    width: 100%;
+    max-width: 330px;
   }
 
   .info__item,
@@ -2666,12 +2802,12 @@ hr {
   }
 
   .info__item p {
-    max-width: 233px;
     font-size: 14px;
     line-height: 180%;
   }
 
   .info__list {
+    width: 100%;
     margin-top: 36px;
     gap: 24px;
   }
@@ -2758,16 +2894,21 @@ hr {
     margin-top: 41px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 28px;
+    width: 90%;
   }
+
   .price__info-item {
-    width: 327px;
-    height: 288px;
+    width: 100%;
+    max-width: 327px;
     border-radius: 30px;
     padding: 36px 26px;
   }
 
   .item-wrapper {
+    width: auto;
+    gap: 20px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -2775,11 +2916,16 @@ hr {
   }
 
   .item-header {
-    width: 100%;
+    flex-basis: 66%;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 29px;
+  }
+
+  .price {
+    flex-basis: 33%;
   }
 
   .partners__info h2 span {
@@ -2820,6 +2966,9 @@ hr {
 
   .price__info button {
     margin-top: 30px;
+    height: 76px;
+    width: 100%;
+    max-width: 240px;
   }
 
   .partners {
@@ -2829,8 +2978,13 @@ hr {
     justify-content: center;
   }
 
+  .partners__container {
+    max-width: 327px;
+    justify-content: flex-start;
+    width: 90%;
+  }
+
   .partners__wrapper {
-    max-width: 90%;
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -2838,7 +2992,6 @@ hr {
   }
 
   .partners__info {
-    max-width: 335px;
     align-items: flex-start;
   }
 
@@ -2852,7 +3005,7 @@ hr {
   .partners__info p {
     text-align: start;
     margin-top: 18px;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 180%;
     font-weight: 400;
   }
@@ -2918,7 +3071,7 @@ hr {
   }
 
   .comment__wrapper {
-    max-width: 340px;
+    max-width: 327px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -2966,7 +3119,7 @@ hr {
   }
 
   .comment__info p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 180%;
   }
 
@@ -2995,14 +3148,15 @@ hr {
   }
 
   .right-hand {
-    width: 176px;
+    width: 150px;
     height: 60px;
-    right: -17px;
+    right: -20px;
     top: 230px;
   }
 
   .store__container {
-    max-width: 340px;
+    width: 100%;
+    max-width: 327px;
     margin: 0;
     align-items: flex-start;
     flex-direction: column;
@@ -3022,6 +3176,12 @@ hr {
     align-items: flex-start;
   }
 
+  .store__content {
+    width: 100%;
+    min-width: auto;
+    max-width: 315px;
+  }
+
   .store {
     overflow: hidden;
     padding-top: 48px;
@@ -3035,7 +3195,7 @@ hr {
   }
 
   .store__content p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 30px;
   }
 
@@ -3044,12 +3204,12 @@ hr {
   }
 
   .footer__container {
-    max-width: 340px;
+    max-width: 327px;
+    width: 100%;
   }
 
   .footer__content {
     flex-direction: column;
-    width: 90%;
     gap: 46px;
     align-items: flex-start;
   }
@@ -3097,15 +3257,6 @@ hr {
   }
   .green-twitter {
     display: none;
-  }
-}
-
-@media screen and (max-width: 426px) {
-  .no-back-mobile {
-    display: none;
-  }
-  .big-picture {
-    display: block;
   }
 }
 
